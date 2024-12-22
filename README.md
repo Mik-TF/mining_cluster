@@ -8,6 +8,7 @@
   - [Cluster - Network](#cluster---network)
   - [Mining - Apps](#mining---apps)
 - [Project Execution Flow](#project-execution-flow)
+- [License](#license)
 
 ---
 
@@ -67,3 +68,7 @@ A concrete real-world scenario could look like this:
   - Run the two miner scripts on each managed node.
 - Run the Tailscale managed script on each managed node.
 - Run the Tailscale control script on the control node.
+
+## License
+
+This work is done under the [Apache 2.0 license](./LICENSE).
