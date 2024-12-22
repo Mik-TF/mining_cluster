@@ -8,6 +8,7 @@
   - [Cluster - Network](#cluster---network)
   - [Mining - Apps](#mining---apps)
 - [Project Execution Flow](#project-execution-flow)
+- [Maintenance](#maintenance)
 - [License](#license)
 
 ---
@@ -18,7 +19,7 @@ We propose a proof-of-concept dual-coin mining cluster. This mining cluster uses
 
 ## Tools as Building Blocks
 
-To achieve our proof-of-concept, we created a series of basic tools that together form an modern FOSS cluster of nodes.
+To achieve our proof-of-concept, we created a series of FOSS tools that can be combined to build projects.
 
 - Tools
   - [ISO Boot Maker](https://github.com/Mik-TF/isobootmaker)
@@ -38,7 +39,7 @@ For the base layer, you can set a private cluster via a VPN, or you can also dep
 - TF Boot Maker Tool:
   - Boot any computer into a 3node.
 - ISO Boot Maker Tool:
-  - Boot any computer into any ISO, e.g. ubuntu 24.04.
+  - Boot any computer into any ISO, e.g. Ubuntu 24.04.
 
 ### Cluster - Network
 
@@ -68,6 +69,14 @@ A concrete real-world scenario could look like this:
   - Run the two miner scripts on each managed node.
 - Run the Tailscale managed script on each managed node.
 - Run the Tailscale control script on the control node.
+
+## Maintenance
+
+The flow explained above will provide a cluster of one control node and many managed nodes.
+
+The managed nodes can be accessed remotely using Tailscale. It is also possible to see the desktop screen using NoMonitor as explained in the respective repo.
+
+Prometheus and Grafana are used for monitoring and update scripts are set on the managed nodes to keep them updated.
 
 ## License
 
