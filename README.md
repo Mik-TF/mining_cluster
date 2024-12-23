@@ -24,7 +24,7 @@ To achieve our proof-of-concept, we created a series of FOSS tools that can be c
 - Tools
   - [ISO Boot Maker](https://github.com/Mik-TF/isobootmaker)
   - [TF Boot Maker](https://github.com/Mik-TF/tfbootmaker)
-  - [Tailscale Cluster](https://github.com/Mik-TF/tailscale_cluster)
+  - [Tailscale Cluster](https://github.com/Mik-TF/tscluster)
   - [Zano Miner](https://github.com/Mik-TF/zanominer)
   - [Monero Miner](https://github.com/Mik-TF/monerominer)
 
