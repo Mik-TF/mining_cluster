@@ -15,7 +15,7 @@
 
 ## Introduction
 
-We propose a proof-of-concept dual-coin mining cluster. This mining cluster uses GPU and CPU on any desktop computer to mine Monero, and to mine and stake Zano.
+We propose a proof-of-concept dual-coin mining cluster. This mining cluster uses GPU and CPU on any desktop computer to mine Monero, and to mine and stake Zano. The mining nodes are reachable remotely via Tailscale and Remmina can also be used to access a GUI interface.
 
 ## Tools as Building Blocks
 
@@ -27,6 +27,7 @@ To achieve our proof-of-concept, we created a series of FOSS tools that can be c
   - [Tailscale Cluster](https://github.com/Mik-TF/tscluster)
   - [Zano Miner](https://github.com/Mik-TF/zanominer)
   - [Monero Miner](https://github.com/Mik-TF/monerominer)
+  - [XRDP Speed](https://github.com/Mik-TF/xrdps)
 
 In the spirit of modular design, we created basic repositories with pieces of the whole. We can now build on those blocks and create complex forms.
 
@@ -47,7 +48,7 @@ For the cluster, you can use Tailscale for private cluster via VPN, while the Th
 
 - Tailscale Cluster Tool
   - Manage a cluster with a control node and managed nodes via VPN.
-- [Mycelium](https://github.com/threefoldtech/mycelium):
+- [Mycelium](https://github.com/threefoldtech/mycelium)
   - Manage a cluster of nodes on the ThreeFold Grid.
 
 ### Mining - Apps
@@ -63,12 +64,14 @@ A concrete real-world scenario could look like this:
 
 - Get desktop computers with proper specs, e.g. good CPU and GPU for managed nodes.
 - Get a laptop as the control node.
-- Use the ISO Boot Maker Tool to:
+- Use the [ISO Boot Maker](https://github.com/Mik-TF/isobootmaker) tool to:
   - Create a Ubuntu 24.04 ISO image and install it on each node.
-- Use the Zano Miner and Monero Miner Tools to:
+- Use the [Zano Miner](https://github.com/Mik-TF/zanominer) and [Monero Miner](https://github.com/Mik-TF/monerominer) tools to:
   - Run the two miner scripts on each managed node.
-- Run the Tailscale managed script on each managed node.
-- Run the Tailscale control script on the control node.
+- Use the [Tailscale](https://github.com/Mik-TF/tscluster) tool
+  - Choose the managed node option for all managed nodes.
+  - Choose the control node option for the control nodes.
+- Use the [XRDP Speed](https://github.com/Mik-TF/xrdps) tool to set up XRDP for remote GUI access.
 
 ## Maintenance
 
